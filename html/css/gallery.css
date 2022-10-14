@@ -4,7 +4,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
@@ -16,7 +16,7 @@
     text-align: center;
     line-height: 12.5vh;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
 }
 
@@ -96,7 +96,7 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
 }
 
@@ -114,34 +114,35 @@
     margin: 2px;
     width: 80%;
     height: 5vh;
-    background-color: #1da1f2;
+    background-color: #000000;
     border-radius: .3vh;
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
+    color: #fff;
 }
 
 .make-post-button > div:hover {
-    background-color: #1da1f2;
+    background-color: #161616;
 }
 
 #delete-button {
     margin: 2px;
     width: 20%;
     height: 5vh;
-    background-color: #921010;
+    background-color: #000000;
     color: #fff;
     border-radius: .3vh;
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
 }
 #delete-button:hover {
-    background-color: #742323;
+    background-color: #161616;
 }
 
 .posts-button {
@@ -160,7 +161,7 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
     background-color: #08a0e9;
 }
@@ -177,7 +178,7 @@
     transition: .05s linear;
     text-align: center;
     line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
     background-color: #ff8f1a;
 }
@@ -193,12 +194,12 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
     outline: none;
     border-bottom: 2px solid #1da0f200;
     resize: none;
     transition: border-bottom 0.1s ease-in-out;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     padding: 0.87vh;
     font-size: 1.4vh;
     top: 12vh;

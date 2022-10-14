@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
 .phone-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
 .phone-app-header {
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 2.5vh;
     top: 5vh;
-    color: white;
+    color: rgb(29, 29, 29);
     height: 20vh;
     text-align: center;
 }
@@ -21,9 +19,9 @@
 #total-contacts {
     position: relative;
     font-size: 1.1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     top: -3vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-app-footer {
@@ -40,13 +38,13 @@
     width: 25%;
     text-align: center;
     float: left;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     transition: .1s;
 }
 
 .phone-selected-footer-tab {
-    color: #dc143c;
+    color: #30336b;
 }
 
 .phone-contacts {
@@ -60,7 +58,7 @@
 .phone-keypad-header {
     padding-top: 6vh;
     padding-left: 3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 1.8vh;
 }
 
@@ -69,21 +67,19 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 11vh;
-    height: 4vh;
-    width: 19vh;
-    border-radius: 1vh;
+    top: 7vh;
+    height: 8vh;
+    width: 28vh;
     border: none;
-    background: rgba(23, 23, 23, 90%);
     outline: none;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
     text-indent: 1vh;
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-    line-height: 3.9vh;
-    font-size: 1.75vh;
+    font-family: 'SF Pro Display Regular';
+    text-align: right;
+    line-height: 7.9vh;
+    font-size: 2.75vh;
+    padding-right: 1vh;
     overflow: hidden;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-keypad {
@@ -92,7 +88,7 @@
     height: 100%;
     width: 100%;
     top: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
 }
 
 .phone-recent {
@@ -101,14 +97,14 @@
     height: 100%;
     width: 100%;
     top: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
 }
 
 .phone-recent-header {
     padding-top: 8vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 1.8vh;
-    color: white;
+    color: rgb(29, 29, 29);
     text-align: center;
 }
 .phone-recent-calls::-webkit-scrollbar {
@@ -137,7 +133,8 @@
 }
 
 .phone-recent-call:hover {
-    background-color: #dc143c;
+        background-color: rgb(250, 250, 250);
+    border-bottom: .2vh solid rgba(51, 51, 51, 0.35);
 }
 .phone-recent-call-image {
     position: absolute;
@@ -148,9 +145,9 @@
     text-align: center;
     line-height: 4.2vh;
     font-size: 1.6vh;
-    color: white;
+    color: rgb(29, 29, 29);
     border-radius: 50%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     background: #4e54c8;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -159,8 +156,8 @@
     position: absolute;
     top: 1.1vh;
     left: 6vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular';
 }
 .phone-recent-call-type {
     position: absolute;
@@ -174,8 +171,8 @@
     bottom: 1.1vh;
     right: 1.75vh;
     font-size: 1.2vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
 }
 
 .phone-keypad-keys {
@@ -184,13 +181,13 @@
     height: 27vh;
     left: 3vh;
     top: 17vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-keypad-key-call {
     position: absolute;
     margin: 0 auto;
-    bottom: 12vh;
+    bottom: 9vh;
     left: 11.7vh;
     font-size: 2.5vh;
     height: 5.5vh;
@@ -214,9 +211,9 @@
     width: 33.33%;
     text-align: center;
     line-height: 7vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 2vh;
-    color: white;
+    color: rgb(29, 29, 29);
     border-bottom: 2px solid rgba(0, 0, 0, 0);
     transition: .1s;
 }
@@ -240,12 +237,12 @@
     padding-right: 2vh;
     margin-left: 0.2vh;
     transition: .1s;
-    color: white;
+    color: rgb(29, 29, 29);
     z-index: 150;
 }
 
 .phone-contacts-header > i:hover {
-    color: #dc143c;
+    color: #30336b;
 }
 
 /* #phone-search-icon {
@@ -271,14 +268,14 @@
     height: 2.5vh;
     border-radius: 1vh;
     box-shadow: 0 0 .2vh 0 rgba(0, 0, 0, 0.281);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     outline: none;
     text-indent: 1vh;
     z-index: 100;
 }
 
 #contact-search::placeholder{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
 }
 
 .phone-contact-list::-webkit-scrollbar {
@@ -286,7 +283,8 @@
 }
 
 .phone-contact-list::-webkit-scrollbar-thumb {
-    background-color: #dc143c;
+        background-color: rgb(250, 250, 250);
+    border-bottom: .2vh solid rgba(51, 51, 51, 0.35);
 }
 
 .phone-contact-list {
@@ -304,34 +302,34 @@
 .phone-contact {
     position: relative;
     width: 90%;
-    color: white;
+    color: rgb(29, 29, 29);
     left: 15px;
     height: 4.5vh;
     margin-top: 2px;
     margin-bottom: 10px;
-    background-color: rgba(23, 23, 23, 90%);
-    border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1vh;
 }
 
 .phone-contact-firstletter {
     position: absolute;
-    height: 3.4vh;
-    width: 3.4vh;
-    margin: .5vh;
-    margin-left: .6vh;
+    /* background-color: #30336b; */
+    height: 1.5vh;
+    width: 1.5vh;
     text-align: center;
-    line-height: 3.5vh;
     border-radius: 50%;
-    font-family: 'Poppins', sans-serif;
+    font-size: 0vh;
     color: white;
+    border: .2vh solid rgb(45, 45, 45);
+    margin-top: -0.1vh;
+    margin-left: -0.1vh;
 }
 
 .phone-contact-name {
     position: absolute;
-    left: 5vh;
+    left: 1.7vh;
     line-height: 4.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 1.4vh;
 }
 
@@ -366,12 +364,12 @@
     left: -.2vh;
     top: 1vh;
     font-size: 2.3vh;
-    color: white;
+    color: rgb(29, 29, 29);
     transition: .1s;
 }
 
 .phone-contact-action-buttons > i:hover {
-    color: #dc143c;
+    color: #30336b;
 }
 .phone-add-contact {
     display: none;
@@ -379,28 +377,28 @@
     height: 100%;
     width: 100%;
     top: -100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     z-index: 102;
 }
 
 .phone-add-contact-header {
     padding-top: 6vh;
     padding-left: 8vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 2vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-add-contact-name {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 12vh;
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -414,7 +412,7 @@
     top: 13.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-add-contact-name:focus {
@@ -427,14 +425,14 @@
 
 .phone-add-contact-number {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 19vh;
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -457,14 +455,14 @@
 
 .phone-add-contact-iban {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 26vh;
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -490,7 +488,7 @@
     top: 20.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 #phone-add-contact-iban-icon {
@@ -498,7 +496,7 @@
     top: 27.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-add-contact-buttons {
@@ -510,20 +508,20 @@
 
 .phone-add-contact-button {
     position: relative;
-    color: white;
+    color: rgb(29, 29, 29);
     float: left;
     width: 50%;
     height: 5vh;
     text-align: center;
     line-height: 4.3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     border-top: 2px solid #30336b00;
     transition: .1s;
     font-size: 1.4vh;
 }
 
 .phone-add-contact-button:hover {
-    border-top: 2px solid #eb4d4b;
+    border-top: 2px solid #30336b;
 }
 
 /* EDIT CONTACT YEEY */
@@ -534,29 +532,29 @@
     height: 100%;
     width: 100%;
     top: -100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     z-index: 102;
 }
 
 
 .phone-edit-contact-header {
-    color: white;
+    color: rgb(29, 29, 29);
     padding-top: 6vh;
     padding-left: 3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 2vh;
 }
 
 .phone-edit-contact-name {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 12vh;
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -570,7 +568,7 @@
     top: 13.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-edit-contact-name:focus {
@@ -584,13 +582,13 @@
 .phone-edit-contact-number {
     position: absolute;
     top: 19vh;
-    color: white;
+    color: rgb(29, 29, 29);
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -613,14 +611,14 @@
 
 .phone-edit-contact-iban {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 26vh;
     left: 6vh;
     background: none;
     border: none;
     outline: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.555);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     height: 3.5vh;
     width: 20vh;
     text-indent: .4vh;
@@ -646,7 +644,7 @@
     top: 20.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 #phone-edit-contact-iban-icon {
@@ -654,7 +652,7 @@
     top: 27.1vh;
     left: 2.1vh;
     font-size: 2.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-edit-contact-buttons {
@@ -666,20 +664,20 @@
 
 .phone-edit-contact-button {
     position: relative;
-    color: white;
+    color: rgb(29, 29, 29);
     float: left;
     width: 33.33%;
     height: 5vh;
     text-align: center;
     line-height: 4.3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     border-top: 2px solid #30336b00;
     transition: .1s;
     font-size: 1.4vh;
 }
 
 .phone-edit-contact-button:hover {
-    border-top: 2px solid #eb4d4b;
+    border-top: 2px solid #30336b;
 }
 
 /* Phone Call App */
@@ -708,8 +706,8 @@
     position: relative;
     text-align: center;
     top: 7.5vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.1vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -717,8 +715,8 @@
     position: relative;
     text-align: center;
     top: 10vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 2.5vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -742,7 +740,7 @@
     left: 5vh;
     transform: rotate(90deg);
     color: #2ecc70e5;
-    background-color: white;
+    background-color: rgb(29, 29, 29);
     padding: 1.5vh;
     font-size: 2.2vh;
     border-radius: 50%;
@@ -760,7 +758,7 @@
     right: 5vh;
     transform: rotate(-135deg);
     color: #e74d3ce0;
-    background-color: white;
+    background-color: rgb(29, 29, 29);
     padding: 1.5vh;
     font-size: 2.2vh;
     border-radius: 50%;
@@ -784,8 +782,8 @@
     position: relative;
     text-align: center;
     top: 7.5vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.1vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -793,8 +791,8 @@
     position: relative;
     text-align: center;
     top: 10vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 2.5vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -883,8 +881,8 @@
     position: relative;
     text-align: center;
     top: 7.5vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.1vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -892,8 +890,8 @@
     position: relative;
     text-align: center;
     top: 10vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 2.5vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -915,8 +913,8 @@
     position: relative;
     text-align: center;
     top: 28vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.2vh;
     text-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
 }
@@ -945,7 +943,7 @@
     height: 100%;
     width: 100%;
     top: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
 }
 
 .phone-suggestedcontacts-header {
@@ -954,10 +952,10 @@
     height: 8vh;
     top: 5vh;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular';
     font-size: 1.6vh;
     line-height: 5vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 .phone-suggestedcontacts-header p {
@@ -991,7 +989,8 @@
 }
 
 .suggested-contact:hover {
-    background-color: #dc143c;
+        background-color: rgb(250, 250, 250);
+    border-bottom: .2vh solid rgba(51, 51, 51, 0.35);
 }
 
 .suggested-contact > i {
@@ -1006,14 +1005,14 @@
     position: absolute;
     left: 5vh;
     top: 2.1vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.3vh;
 }
 
 .suggested-number {
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular';
+    color: rgb(29, 29, 29);
     font-size: 1.2vh;
 }
 

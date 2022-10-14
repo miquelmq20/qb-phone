@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 .garage-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
@@ -14,9 +12,10 @@
     width: 100%;
     text-align: center;
     line-height: 13.5vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
+    text-transform: uppercase;
 }
 
 .garage-homescreen {
@@ -50,42 +49,43 @@
 
 .garage-vehicle {
     position: relative;
-    height: 7vh;
+    height: 4vh;
     width: 100%;
-    background-color: rgba(23, 23, 23, 90%);
+    background-color: white;
     border-radius: 1vh;
     transition: .08s linear;
     margin-bottom: 1vh;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
 }
 
 .garage-vehicle-firstletter {
     position: relative;
-    line-height: 7vh;
+    line-height: 3vh;
     left: 1.2vh;
-    background-color: #ee5253;
-    padding-top: 1.1vh;
-    padding-bottom: 1.1vh;
-    padding-left: 1.6vh;
-    padding-right: 1.6vh;
+    top: 0.6vh;
+    background-color: #37bdbb;
+    padding-top: 0.15vh;
+    padding-bottom: 0.15vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
     border-radius: 50%;
     color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8vh;
-    transition: .05s linear;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 2.5vh;
+    transition: .2s ease;
 }
 
 .garage-vehicle:hover {
-    background-color: #dc143c;
+    background-color: rgb(209, 209, 209);
+    transition: .2s ease;
 }
 
 .garage-vehicle-name {
     position: absolute;
-    left: 7vh;
-    color: white;
-    line-height: 7vh;
+    left: 5.5vh;
+    color: rgb(29, 29, 29);
+    line-height: 4vh;
     font-size: 1.2vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .garage-cardetails {
@@ -102,10 +102,10 @@
 .vehicle-brand {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -114,10 +114,10 @@
 .vehicle-model {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -126,10 +126,10 @@
 .vehicle-plate {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -138,10 +138,10 @@
 .vehicle-garage {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -150,10 +150,10 @@
 .vehicle-status {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -162,10 +162,10 @@
 .vehicle-fuel {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -174,10 +174,10 @@
 .vehicle-engine {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -186,10 +186,10 @@
 .vehicle-body {
     position: relative;
     width: 100%;
-    background-color: rgb(54, 54, 54);
+    background-color: white;
     padding: .8vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-bottom: .1vh solid #fff;
     margin-bottom: 1vh;
     font-size: 1.2vh;
@@ -206,21 +206,58 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: -1vh;
+    margin-top: 5vh;
 }
 
 .return-track > div {
-    margin: 2px;
-    width: 50%;
-    height: 5vh;
-    background-color: rgb(233, 233, 233);
-    border-radius: .3vh;
-    transition: .05s linear;
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
     text-align: center;
-    line-height: 5vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.4vh;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .return-track > div:hover {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
+}
+
+.return-track2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -1vh;
+    margin-top: 5vh;
+}
+
+.return-track2 > div {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
+}
+
+.return-track2 > div:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }

@@ -28,9 +28,9 @@ $(document).on('click', '.settings-app-tab', function(e){
         checkBoxes.prop("checked", QB.Phone.Data.AnonymousCall);
 
         if (!QB.Phone.Data.AnonymousCall) {
-            $("#numberrecognition > p").html('Off');
+            $("#numberrecognition > p").html('Deshabilitado');
         } else {
-            $("#numberrecognition > p").html('On');
+            $("#numberrecognition > p").html('Habilitado');
         }
     }
 });
@@ -40,11 +40,11 @@ $(document).on('click', '#accept-background', function(e){
     var hasCustomBackground = QB.Phone.Functions.IsBackgroundCustom();
 
     if (hasCustomBackground === false) {
-        QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", QB.Phone.Settings.Backgrounds[QB.Phone.Settings.Background].label+" is set!")
+        QB.Phone.Notifications.Add("fas fa-paint-brush", "Ajustes","Se ha establecido el fondo")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
         $(".phone-background").css({"background-image":"url('/html/img/backgrounds/"+QB.Phone.Settings.Background+".png')"})
     } else {
-        QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", "Personal background set!")
+        QB.Phone.Notifications.Add("fas fa-paint-brush", "Ajustes", "¡El fondo ha cambiado!")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
         $(".phone-background").css({"background-image":"url('"+QB.Phone.Settings.Background+"')"});
     }
@@ -139,11 +139,11 @@ $(document).on('click', '#accept-profilepicture', function(e){
     e.preventDefault();
     var ProfilePicture = QB.Phone.Data.MetaData.profilepicture;
     if (ProfilePicture === "default") {
-        QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", "Standard avatar set!")
+        QB.Phone.Notifications.Add("fas fa-paint-brush", "Ajustes", "¡Se reestableció el avatar!")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
         $("[data-settingstab='profilepicture']").find('.settings-tab-icon').html('<img src="./img/default.png">');
     } else {
-        QB.Phone.Notifications.Add("fas fa-paint-brush", "Settings", "Personal avatar set!")
+        QB.Phone.Notifications.Add("fas fa-paint-brush", "Ajustes", "¡Tu avatar ha cambiado!")
         QB.Phone.Animations.TopSlideUp(".settings-"+QB.Phone.Settings.OpenedTab+"-tab", 200, -100);
         $("[data-settingstab='profilepicture']").find('.settings-tab-icon').html('<img src="'+ProfilePicture+'">');
     }

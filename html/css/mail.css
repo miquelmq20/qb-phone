@@ -4,7 +4,7 @@
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
@@ -15,16 +15,16 @@
 
 .mail-header {
     display: block;
-    height: 14vh;
+    height: 10vh;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background: rgb(2, 122, 158);
 }
 
 #mail-header-text {
     position: absolute;
     top: 5vh;
-    left: 12vh;
-    font-family: 'Poppins', sans-serif;
+    left: 1.5vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
     color: white;
 }
@@ -32,8 +32,8 @@
 #mail-header-mail {
     position: absolute;
     top: 7vh;
-    left: 6vh;
-    font-family: 'Poppins', sans-serif;
+    left: 1.5vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.3vh;
     color: white;
 }
@@ -42,7 +42,7 @@
     position: absolute;
     top: 10vh;
     right: 1.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1vh;
     color: white;
 }
@@ -50,7 +50,7 @@
 .mail-list {
     position: absolute;
     width: 99%;
-    height: 44.7vh;
+    height: 46vh;
     top: 12vh;
     left: .1vh;
     overflow-x: hidden !important;
@@ -64,26 +64,25 @@
 .mail {
     position: relative;
     height: 7.5vh;
-    width: 90%;
-    left: 15px;
-    margin-top: 2px;
+    width: 96.4%;
+    left: 0.6vh;
+    margin-top: 0.5vh;
     margin-bottom: 10px;
-    transition: .05s ease-in-out;
-    background: rgba(23, 23, 23, 90%);
-    border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    transition: .2s ease;
+    background: white;
+    border-left: 1vh solid rgb(2, 122, 158);
 }
 
 .mail:hover {
-    background-color: #dc143c;
-    transition: .05s ease-in-out;
+    background-color: rgb(209, 209, 209);
+    transition: .2s ease;
 }
 
 .mail-sender {
     position: absolute;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.6vh;
-    color: white;
+    color: rgb(29, 29, 29);
     left: 0.5vh;
     top: 1vh;
 }
@@ -92,9 +91,9 @@
     position: absolute;
     top: 3.3vh;
     left: 0.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.15vh;
-    color: white;
+    color: rgba(29, 29, 29, 0.887);
     max-width: 18vh;
     width: 16vh;
 }
@@ -111,9 +110,9 @@
 
 .mail-time {
     position: absolute;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.1vh;
-    color: white;
+    color: rgba(29, 29, 29, 0.724);
     right: 0.5vh;
     top: 1vh;
 }
@@ -122,7 +121,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
     top: 0;
     left: -30vh;
@@ -141,22 +140,22 @@
 }
 
 .mail-back > i {
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 2vh;
     transition: .05s ease-in-out;
 }
 
 .mail-back:hover #mail-back {
-    color: #dc143c;
+    color: #c2c2c2;
     transition: .05s ease-in-out;
 }
 
 .mail-subject {
     position: absolute;
-    color: white;
+    color: rgb(29, 29, 29);
     top: 8vh;
     left: 2vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.8vh;
     max-width: 22vh;
 }
@@ -171,16 +170,16 @@
     position: absolute;
     top: 13vh;
     left: 2vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.1vh;
-    color: white;
+    color: rgba(29, 29, 29, 0.75);
 }
 
 .mail-spacing {
     position: absolute;
     width: 93%;
-    background-color: white;
-    height: .2vh;
+    background-color: rgba(29, 29, 29, 0.647);
+    height: .15vh;
     top: 15.5vh;
     margin: 0 auto;
     left: 0;
@@ -193,9 +192,9 @@
     height: calc(100% - 250px);
     top: 17.3vh;
     left: 2vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.3vh;
-    color: white;
+    color: rgba(29, 29, 29, 0.75);
     max-width: 23vh;
     overflow-y: scroll;
 }
@@ -218,55 +217,61 @@
     width: 100%;
     height: 4vh;
     bottom: 40px;
+    margin-left: -0.8vh;
+    text-align: center;
 }
 
 .opened-mail-footer-item {
+    width: 40% !important;
     position: relative;
-    width: 50%;
-    height: 4vh;
+    height: 100%;
+    border-radius: 1vh !important;
     text-align: center;
-    line-height: 4.3vh;
-    color: white;
-    font-size: 1.8vh;
-    transition: .1s ease-in-out;
-    float: left;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .opened-mail-footer-item:hover {
-    color: #dc143c;
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
 }
 
-.opened-mail-footer-item:hover .mail-icon {
-    font-size: 1.9vh;
-    transition: .1s ease-in-out;
-    animation: Shake 1s infinite;
+.opened-mail-footer-item2 {
+    position: relative;
+    height: 100%;
+    width: 40% !important;
+    border-radius: 1vh !important;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
 }
 
-@keyframes Shake {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    75% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(5deg);
-    }
+.opened-mail-footer-item2:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }
 
-/* Advert App */
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .advert-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
@@ -279,20 +284,21 @@
 
 #advert-header-text {
     position: absolute;
-    top: 6vh;
-    left: 8vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8vh;
-    color: white;
+    top: 4.5vh;
+    left: 1.5vh;
+    font-family: 'SF Pro Display Regular', sans-serif !important;
+    font-size: 1.5vh;
+    color: rgb(29, 29, 29);
+    font-weight: bold;
 }
 
 #advert-header-name {
     position: absolute;
-    top: 9vh;
-    left: 6vh;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.4vh;
-    color: white;
+    top: 6.6vh;
+    left: 1.5vh;
+    font-family: 'SF Pro Display Regular', sans-serif !important;
+    font-size: 1.2vh;
+    color: rgb(29, 29, 29);
 }
 
 .advert-list {
@@ -310,7 +316,7 @@
 }
 .advert {
     position: relative;
-    background-color: #ff8f1a;
+    background-color: white;
     height: auto;
     min-height: 4vh;
     width: 90%;
@@ -318,21 +324,16 @@
     margin: 0 auto;
     margin-top: 2vh;
     margin-bottom: 2vh;
-    border-radius: 0.15rem;
+    border-radius: 1vh;
     text-align: center;
 }
 
 .advert > p {
     margin-top: 1.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     max-width: 25vh;
     color: black;
     font-weight: bolder;
-}
-
-.advert:hover {
-    background-color: rgb(255, 154, 46);
-    transition: .05s ease-in-out;
 }
 
 .advert-sender {
@@ -340,31 +341,28 @@
     top: .8vh;
     color: black;
     font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.3vh;
 }
 
 .test-slet {
     position: absolute;
-    width: 100%;
+    width: 4.2vh;
     height: 4.2vh;
     top: 52.6vh;
+    right: 2vh;
     transition: .1s ease-in-out;
     text-align: center;
     line-height: 4.2vh;
     font-size: 2.3vh;
     color: white;
-    background-color: rgb(36, 36, 36);
+    border-radius: 50%;
+    background-color: rgb(216, 156, 25);
 }
 
 .test-slet:hover {
     transition: .1s ease-in-out;
-}
-
-.test-slet:hover .test-icon {
-    color: #ff8f1a;
-    transition: .1s ease-in-out;
-    animation: Shake 1s infinite;
+    background-color: rgb(222, 172, 62);
 }
 
 .new-advert {
@@ -373,7 +371,7 @@
     height: 100%;
     width: 100%;
     top: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
     left: -30vh;
 }
@@ -394,7 +392,7 @@
     line-height: 5vh;
     font-size: 2.2vh;
     transition: .1s linear;
-    color: white;
+    color: rgb(67, 67, 67);
 }
 
 .new-advert-footer-item:hover {
@@ -402,8 +400,7 @@
 }
 
 .new-advert-footer-item:hover .new-advert-icon {
-    color: #ff8f1a;
-    animation: Shake 1s infinite;
+    color: #1d1d1d;
 }
 
 .new-advert-header {
@@ -415,11 +412,11 @@
 
 #new-advert-header-text {
     position: absolute;
-    top: 6vh;
-    left: 6vh;
-    font-family: 'Poppins', sans-serif;
+    top: 7vh;
+    left: 3.5vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.8vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 
 #advert-new-url{
@@ -428,17 +425,17 @@
     margin: 0 auto;
     left: 0;
     right: 0;
-    background-color: rgba(23, 23, 23, 90%);
+    background-color: white;
     outline: none;
     resize: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     padding: 0.87vh;
     font-size: 1.4vh;
     top: 45vh;
     width: 22vh;
     border-radius: 7px;
-    color: white;
-    border: 2px solid rgb(255, 154, 46);
+    color: rgb(29, 29, 29);
+    border: 0.1vh solid transparent;
 }
 
 #advert-new-url::-webkit-scrollbar {
@@ -449,7 +446,7 @@
     position: absolute;
     margin: 0 auto;
     left: 0;
-    color: white;
+    color: rgb(29, 29, 29);
     right: 0;
     top: 12vh;
     height: 30vh;
@@ -457,10 +454,10 @@
     outline: none;
     resize: none;
     border-radius: 7px;
-    border: 2px solid rgb(255, 154, 46);
-    background-color: rgba(23, 23, 23, 90%);
+    background-color: white;
+    border: 0.1vh solid transparent;
     padding: 1.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     transition: .1s linear;
 }
 
@@ -471,8 +468,8 @@
 
 .nomails {
     text-align: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(33, 33, 33);
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
     line-height: 20vh;
 }

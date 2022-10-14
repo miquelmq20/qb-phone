@@ -65,8 +65,8 @@ QB.Phone.Functions.SetupApplications = function(data) {
         var blockedapp = IsAppJobBlocked(app.blockedjobs, QB.Phone.Data.PlayerJob.name)
 
         if ((!app.job || app.job === QB.Phone.Data.PlayerJob.name) && !blockedapp) {
-            $(applicationSlot).css({"background-color":app.color});
-            var icon = '<i class="ApplicationIcon '+app.icon+'" style="'+app.style+'"></i>';
+            //var icon = '<i class="ApplicationIcon" src="./img/apps/icons/'+app.app+'.png" style="'+app.style+'">';
+              var icon = '<img src="./img/'+app.app+'.png" "style="'+app.style+'">';
             if (app.app == "meos") {
                 icon = '<img src="./img/politie.png" class="police-icon">';
             }
@@ -235,7 +235,7 @@ $(document).on('click', '.phone-application', function(e){
         }
     } else {
         if (PressedApplication != null){
-            QB.Phone.Notifications.Add("fas fa-exclamation-circle", "System", QB.Phone.Data.Applications[PressedApplication].tooltipText+" is not available!")
+            QB.Phone.Notifications.Add("fas fa-exclamation-circle", "iFruit OS", "La aplicación estará disponible próximamente")
         }
     }
 });

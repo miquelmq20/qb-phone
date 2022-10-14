@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
 .bank-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
     overflow: hidden;
 }
 
@@ -22,8 +20,8 @@
     height: 100%;
     text-align: center;
     line-height: 6vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    color: rgb(29, 29, 29);
     transition: .08s;
 }
 
@@ -73,7 +71,7 @@
 }
 .bank-app-invoices-list::-webkit-scrollbar {
     width: .5vh;
-    background-color: #dc143c;
+    background-color: transparent;
 }
 .bank-app-invoice {
     position: relative;
@@ -87,8 +85,8 @@
     position: absolute;
     top: 1vh;
     left: 2vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.3vh;
 }
 .bank-app-invoice-amount {
@@ -96,7 +94,7 @@
     bottom: 1vh;
     left: 2vh;
     color: rgba(255, 255, 255, 0.781);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.22vh;
 }
 .bank-app-invoice-buttons {
@@ -132,13 +130,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(255, 255, 255);
     top: -100%;
     z-index: 500;
 }
 .bank-app-account {
     position: absolute;
-    background-color: rgba(23, 23, 23, 90%);
+    background-color: white;
     height: 9.5vh;
     width: 80%;
     margin: 0px auto;
@@ -147,29 +145,25 @@
     top: 1.5vh;
     transition: all 0.1s ease 0s;
     border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
-}
-.bank-app-account:hover{
-    background-color: #dc143c;
-    transition: .5s ease;
+    border-color: white;
 }
 .bank-app-account-title {
     position: absolute;
     top: 1vh;
     left: 1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     letter-spacing: .1vh;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 1.1vh;
 }
 .bank-app-account-number {
     position: absolute;
     top: 3vh;
     left: 1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     letter-spacing: .1vh;
     width: 100%;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 1.1vh;
     background: transparent;
     outline: none;
@@ -179,20 +173,20 @@
     background: transparent;
     outline: none;
     border: none;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 .bank-app-account-balance {
     position: absolute;
     top: 6.5vh;
     left: 1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     letter-spacing: .1vh;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 1.5vh;
 }
 .bank-app-account-actions {
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 0px auto;
     bottom: 2.5vh;
     height: 5vh;
@@ -203,14 +197,14 @@
     font-size: 2.5vh;
     position: absolute;
     transition: all 0.1s ease 0s;
-    background: rgba(23, 23, 23, 90%);
+    background-color: rgb(36, 103, 192);
     border-radius: 0.15rem;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    transition: .2s ease;
 }
 
 .bank-app-account-actions:hover {
-    background-color: #dc143c;
-    transition: .5s ease;
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }
 .bank-app-loaded {
     display: none;
@@ -239,8 +233,8 @@
     top: 24vh;
     left: 9vh;
     font-size: 4.5vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     z-index: 100;
     opacity: 0;
 }
@@ -249,8 +243,8 @@
     position: absolute;
     top: 5.5vh;
     left: 6vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 2vh;
 }
 
@@ -262,13 +256,13 @@
     border: none;
     outline: none;
     border-bottom: 2px solid #f5f6fa;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     height: 3.5vh;
     width: 18vh;
     text-indent: .4vh;
     transition: .1s;
     font-size: 1.3vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 #bank-transfer-iban::-webkit-inner-spin-button {
     display: none;
@@ -287,7 +281,7 @@
     border: none;
     outline: none;
     border-bottom: 2px solid #f5f6fa;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     /* background: rgb(33,36,43); */
     /* background: linear-gradient(0deg, rgba(33,36,43,0.5) 0%, rgba(178,132,254,0) 100%); */
     height: 3.5vh;
@@ -295,7 +289,7 @@
     text-indent: .4vh;
     transition: .1s;
     font-size: 1.3vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 #bank-transfer-amount::-webkit-inner-spin-button {
     display: none;
@@ -345,8 +339,8 @@
     height: 100%;
     text-align: center;
     line-height: 4.5vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    color: rgb(29, 29, 29);
     font-size: 1.4vh;
     transition: .1s;
 }
@@ -374,9 +368,9 @@
 .bank-app-my-contacts-header {
     position: relative;
     padding: 5vh 0 0 8vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 2vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 .bank-app-my-contacts-list {
     position: absolute;
@@ -413,16 +407,16 @@
     text-align: center;
     line-height: 3.6vh;
     border-radius: 50%;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    color: rgb(29, 29, 29);
 }
 .bank-app-my-contact-name {
     position: absolute;
     left: 5vh;
     line-height: 4.5vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
-    color: white;
+    color: rgb(29, 29, 29);
 }
 .bank-app-my-contacts-list-header {
     position: absolute;
@@ -438,7 +432,7 @@
     margin: 0px auto;
     left: 0px;
     right: 0px;
-    color: white;
+    color: rgb(29, 29, 29);
     opacity: 1;
     height: 2.5vh;
     border-radius: 1vh;
@@ -451,7 +445,7 @@
     box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
 }
 #bank-app-my-contact-search::placeholder{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 .bank-app-my-contacts-list-back {
     position: absolute;
@@ -461,8 +455,8 @@
     text-align: center;
     line-height: 5vh;
     text-transform: uppercase;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: rgb(29, 29, 29);
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.4vh;
     transition: .1s;
 }

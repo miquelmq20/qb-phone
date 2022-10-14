@@ -1,58 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
 .settings-app {
     display: none;
     height: 100%;
     width: 100%;
-    background: rgba(36, 36, 36, 90%);
+    background-color:rgb(227, 227, 227);
+    border-top: 3vh solid grey;
     overflow: hidden;
 }
 
 .settings-app-header {
     position: relative;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3vh;
-    text-align: center;
-    top: 70px;
-    color: white;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.6vh;
+    text-align: left;
+    padding-top: 2vh;
+    padding-bottom: 0.1vh;
+    padding-left: 2.3vh;
+    padding-right: 8vh;
+    color: rgb(29, 29, 29);
+    background-color:rgb(227, 227, 227);
+    font-weight: 500;
+    letter-spacing: 0.15vh;
 }
 
 .settings-app-tab-appereance {
     position: absolute;
-    top: 15vh;
+    top: 8vh;
     height: 100%;
     width: 100%;
 }
 
 .settings-app-tab-information {
     position: absolute;
-    top: 30vh;
+    top: 23.7vh;
     height: 100%;
     width: 100%;
+    text-align: center;
+    font-size: 0.9vh;
 }
 
 .settings-app-tab {
     position: relative;
-    width: 90%;
+    width: 100%;
     border-radius: 0.15rem;
     height: 6vh;
-    margin-bottom: 10px;
-    color: white;
-    background: rgba(23, 23, 23, 90%);
-    left: 15px;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    color: rgb(29, 29, 29);
+    background: white;
 }
 
 .settings-app-tab:hover {
-    background-color: #dc143c;
-    transition: .5s ease;
+    background-color: rgb(209, 209, 209);
+    transition: .2s ease;
 }
 
 .settings-app-tab-header {
     position: absolute;
     top: -2.5vh;
     height: 2.6vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
     border-bottom: 1px solid rgba(0, 0, 0, 0.17);
     width: 100%;
@@ -71,8 +75,8 @@
 
 .settings-tab-icon > img {
     position: absolute;
-    width: 3.3vh;
-    height: 3.3vh;
+    width: 5.3vh;
+    height: 5.3vh;
     border-radius: 50%;
     box-shadow: 0 0 .5vh 0 rgba(0, 0, 0, 0.05);
     margin-left: -.3vh;
@@ -83,7 +87,31 @@
     left: 6.2vh;
     top: 1.2vh;
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
+}
+.settings-tab-title1 {
+    position: absolute;
+    left: 6.2vh;
+    top: 2.2vh;
+    font-size: 1.3vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
+}
+.settings-tab-title2 {
+    position: absolute;
+    left: 8.2vh;
+    top: 2.3vh;
+    font-size: 1.5vh;
+    font-weight: 500;
+    letter-spacing: 0.1vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
+}
+.settings-tab-description2 {
+    position: absolute;
+    left: 8.25vh;
+    top: 4vh;
+    font-size: 1.2vh;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    color: rgb(62, 62, 62);
 }
 
 .settings-tab-description {
@@ -91,54 +119,53 @@
     left: 6.2vh;
     top: 3.2vh;
     font-size: 1.2vh;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    color: rgb(62, 62, 62);
 }
-
+/*-------------------------------------------------------------------------------------------------------------------------*/
 .settings-background-tab {
     display: block;
     position: absolute;
+    border-top: 3vh solid grey;
     top: -100%;
     height: 100%;
     width: 100%;
     left: 0;
     right: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
 }
 
 .settings-profilepicture-tab {
     display: block;
     position: absolute;
+    border-top: 3vh solid grey;
     top: -100%;
     height: 100%;
     width: 100%;
     left: 0;
     right: 0;
-    background: rgb(36, 36, 36);
+    background-color:rgb(227, 227, 227);
 }
 
 .background-options {
     position: absolute;
     height: 50%;
     width: 100%;
-    top: 13vh;
+    top: 6vh;
 }
 
 .background-option {
     position: relative;
-    width: 90%;
+    width: 100%;
     border-radius: 0.15rem;
     height: 6vh;
-    margin-bottom: 10px;
-    color: white;
-    background: rgba(23, 23, 23, 90%);
-    left: 15px;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    color: rgb(29, 29, 29);
+    background: white;
 }
 
 .background-option:hover {
-    background-color: #dc143c;
-    transition: .5s ease;
+    background-color: rgb(209, 209, 209);
+    transition: .2s ease;
 }
 
 .background-option-icon {
@@ -148,7 +175,7 @@
     text-align: center;
     line-height: 7vh;
     font-size: 2.3vh;
-    color: #fbc531;
+    color: black;
 }
 
 .background-option-title {
@@ -157,9 +184,9 @@
     top: 1.5vh;
     text-align: center;
     font-size: 1vh;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .background-option-description {
@@ -168,9 +195,9 @@
     top: 3.6vh;
     text-align: center;
     font-size: 1vh;
-    color: white;
+    color: rgb(62, 62, 62);
     font-size: 1.1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .background-option-current {
@@ -180,31 +207,60 @@
     text-align: center;
     font-size: 1.6vh;
     color: green;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .background-buttons {
     position: absolute;
-    bottom: 40px;
-    height: 5vh;
+    bottom: 5vh;
+    height: 4vh;
     width: 100%;
+    text-align: center;
+    margin-left: -0.5vh;
 }
 
 .background-button {
     position: relative;
-    float: left;
     height: 100%;
-    width: 50%;
+    width: 40%;
+    border-radius: 1vh;
     text-align: center;
-    line-height: 4.7vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
     transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .background-button:hover {
-    border-top: .3vh solid #dc143c;
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
+}
+
+.background-button1 {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
+}
+
+.background-button1:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }
 
 .background-custom {
@@ -223,7 +279,7 @@
 }
 
 .background-custom-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     padding: 2vh;
     font-size: 1.5vh;
     text-align: center;
@@ -237,7 +293,7 @@
     outline: none;
     height: 3.5vh;
     width: 21vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     background: rgb(235, 235, 235);
     border-radius: 2vh;
     text-align: center;
@@ -251,46 +307,74 @@
     position: absolute;
     bottom: 2vh;
     width: 100%;
-    height: 5vh;
+    height: 3.8vh;
+    text-align: center;
 }
 
 .custom-background-button {
     position: relative;
-    float: left;
     height: 100%;
-    width: 50%;
+    width: 40%;
+    border-radius: 1vh;
     text-align: center;
-    line-height: 4.1vh;
-    color: black;
-    font-family: 'Poppins', sans-serif;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
-    transition: .08s;
-    border-bottom: 2px solid #e8421800;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .custom-background-button:hover {
-    font-weight: bolder;
-    color: #DC143C;
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
 }
 
+.custom-background-button1 {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
+}
+
+.custom-background-button1:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .profilepicture-options {
     position: absolute;
     height: 50%;
     width: 100%;
-    top: 13vh;
+    top: 6vh;
 }
 
 .profilepicture-option {
     position: relative;
-    width: 90%;
+    width: 100%;
     border-radius: 0.15rem;
     height: 6vh;
-    margin-bottom: 10px;
-    color: white;
-    background: rgba(23, 23, 23, 90%);
-    left: 15px;
-    box-shadow: 0rem 0rem 0.1rem 0.05rem #000000;
+    color: rgb(29, 29, 29);
+    background: white;
+}
+.profilepicture-option:hover {
+    background-color: rgb(209, 209, 209);
+    transition: .2s ease;
 }
 
 .profilepicture-option-icon {
@@ -300,7 +384,7 @@
     text-align: center;
     line-height: 7vh;
     font-size: 2.3vh;
-    color: #fbc531;
+    color: black;
 }
 
 .profilepicture-option-title {
@@ -309,9 +393,9 @@
     top: 1.5vh;
     text-align: center;
     font-size: 1vh;
-    color: white;
+    color: rgb(29, 29, 29);
     font-size: 1.3vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .profilepicture-option-description {
@@ -320,9 +404,9 @@
     top: 3.6vh;
     text-align: center;
     font-size: 1vh;
-    color: white;
+    color: rgb(62, 62, 62);
     font-size: 1.1vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .profilepicture-option-current {
@@ -332,30 +416,60 @@
     text-align: center;
     font-size: 1.6vh;
     color: green;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
 }
 
 .profilepicture-buttons {
     position: absolute;
-    bottom: 40px;
-    height: 5vh;
+    bottom: 5vh;
+    height: 4vh;
     width: 100%;
+    text-align: center;
+    margin-left: -0.5vh;
 }
 
 .profilepicture-button {
     position: relative;
-    float: left;
     height: 100%;
-    width: 50%;
+    width: 40%;
+    border-radius: 1vh;
     text-align: center;
-    line-height: 4.7vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .profilepicture-button:hover {
-    border-top: .3vh solid #dc143c;
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
+}
+
+.profilepicture-button2 {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
+}
+
+.profilepicture-button2:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }
 
 .profilepicture-custom {
@@ -374,7 +488,7 @@
 }
 
 .profilepicture-custom-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     padding: 2vh;
     font-size: 1.5vh;
     text-align: center;
@@ -387,7 +501,7 @@
     outline: none;
     height: 3.5vh;
     width: 21vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'SF Pro Display Regular', sans-serif;
     border-radius: 2vh;
     text-align: center;
 }
@@ -400,26 +514,52 @@
     position: absolute;
     bottom: 2vh;
     width: 100%;
-    height: 5vh;
+    height: 3.8vh;
+    text-align: center;
 }
 
 .custom-profilepicture-button {
     position: relative;
-    float: left;
     height: 100%;
-    width: 50%;
+    width: 40%;
+    border-radius: 1vh;
     text-align: center;
-    line-height: 4.1vh;
-    color: black;
-    font-family: 'Poppins', sans-serif;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
     font-size: 1.5vh;
-    transition: .08s;
-    border-bottom: 2px solid #e8421800;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(122, 122, 122);
 }
 
 .custom-profilepicture-button:hover {
-    font-weight: bolder;
-    color: #DC143C;
+    background-color: rgb(114, 114, 114);
+    transition: .2s ease;
+}
+
+.custom-profilepicture-button2 {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    border-radius: 1vh;
+    text-align: center;
+    line-height: 3.7vh;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-family: 'SF Pro Display Regular', sans-serif;
+    font-size: 1.5vh;
+    transition: .05s;
+    margin-left: 1vh;
+    letter-spacing: 0.1vh;
+    background-color: rgb(36, 103, 192);
+}
+
+.custom-profilepicture-button2:hover {
+    background-color: rgb(32, 93, 172);
+    transition: .2s ease;
 }
 
 /* The switch - the box around the slider */
@@ -466,11 +606,11 @@
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #68c029;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #68c029;
 }
 
 input:checked + .slider:before {

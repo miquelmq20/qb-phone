@@ -267,19 +267,19 @@ QBCore.Functions.CreateCallback('qb-phone:server:PayInvoice', function(source, c
         local commission = round(amount * Config.BillingCommissions[society])
         SenderPly.Functions.AddMoney('bank', commission)
         invoiceMailData = {
-            sender = 'Billing Department',
-            subject = 'Commission Received',
-            message = string.format('You received a commission check of $%s when %s %s paid a bill of $%s.', commission, Ply.PlayerData.charinfo.firstname, Ply.PlayerData.charinfo.lastname, amount)
+            sender = 'Banco',
+            subject = 'Nueva factura',
+            message = string.format('Has recibido una nueva factura de $', amount)
         }
     elseif not SenderPly and Config.BillingCommissions[society] then
         invoiceMailData = {
-            sender = 'Billing Department',
-            subject = 'Bill Paid',
-            message = string.format('%s %s paid a bill of $%s', Ply.PlayerData.charinfo.firstname, Ply.PlayerData.charinfo.lastname, amount)
+            sender = 'Banco',
+            subject = 'Factura pagada',
+            message = string.format('Has pagado una factura de $', amount)
         }
     end
     Ply.Functions.RemoveMoney('bank', amount, "paid-invoice")
-    TriggerEvent('qb-phone:server:sendNewMailToOffline', sendercitizenid, invoiceMailData)
+    --TriggerEvent('qb-phone:server:sendNewMailToOffline', sendercitizenid, invoiceMailData)  -- enviar mail de pago de factura, quitado por zurky
     TriggerEvent("qb-bossmenu:server:addAccountMoney", society, amount)
     MySQL.Async.execute('DELETE FROM phone_invoices WHERE id = ?', {invoiceId})
     local invoices = MySQL.Sync.fetchAll('SELECT * FROM phone_invoices WHERE citizenid = ?', {Ply.PlayerData.citizenid})
@@ -368,10 +368,10 @@ QBCore.Functions.CreateCallback('qb-phone:server:FetchResult', function(source, 
     else
         query = query .. ' OR `charinfo` LIKE "%' .. search .. '%"'
     end
-    local ApartmentData = MySQL.Sync.fetchAll('SELECT * FROM apartments', {})
+    /*local ApartmentData = MySQL.Sync.fetchAll('SELECT * FROM apartments', {})
     for k, v in pairs(ApartmentData) do
         ApaData[v.citizenid] = ApartmentData[k]
-    end
+    end*/
     local result = MySQL.Sync.fetchAll(query)
     if result[1] ~= nil then
         for k, v in pairs(result) do
@@ -493,7 +493,7 @@ QBCore.Functions.CreateCallback('qb-phone:server:ScanPlate', function(source, cb
         end
         cb(vehicleData)
     else
-        TriggerClientEvent('QBCore:Notify', src, 'No Vehicle Nearby', 'error')
+        TriggerClientEvent('QBCore:Notify', src, 'No hay vehículos cercanos', 'error')
         cb(nil)
     end
 end)
@@ -863,7 +863,7 @@ RegisterNetEvent('qb-phone:server:TransferMoney', function(iban, amount)
             sender.Functions.RemoveMoney('bank', amount, "phone-transfered")
         end
     else
-        TriggerClientEvent('QBCore:Notify', src, "This account number doesn't exist!", "error")
+        TriggerClientEvent('QBCore:Notify', src, "El número de cuenta no es válido", "error")
     end
 end)
 
@@ -1036,7 +1036,7 @@ RegisterNetEvent('qb-phone:server:RemoveImageFromGallery', function(data)
     MySQL.Async.execute('DELETE FROM phone_gallery WHERE citizenid = ? AND image = ?',{Player.PlayerData.citizenid,image})
 end)
 
-RegisterNetEvent('qb-phone:server:sendPing', function(data)
+/*RegisterNetEvent('qb-phone:server:sendPing', function(data)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     print(src, data)
@@ -1045,7 +1045,7 @@ RegisterNetEvent('qb-phone:server:sendPing', function(data)
     else
         TriggerClientEvent("QBCore:Notify", src, "You cannot ping yourself", "error")
     end
-end)
+end)*/
 
 -- Command
 
@@ -1062,11 +1062,22 @@ QBCore.Commands.Add("setmetadata", "Set Player Metadata (God Only)", {}, false, 
     end
 end, "god")
 
-QBCore.Commands.Add('bill', 'Bill A Player', {{name = 'id', help = 'Player ID'}, {name = 'amount', help = 'Fine Amount'}}, false, function(source, args)
+RegisterNetEvent('qb-phone:server:setInvoice')
+AddEventHandler('qb-phone:server:setInvoice', function(state, czid)
+    local reciever = tonumber(QBCore.Functions.GetPlayerByCitizenId(czid).PlayerData.source)
+    local src = tonumber(source)
+    if state then
+        TriggerClientEvent('QBCore:Notify', reciever, 'La id ' .. src .. 'ha pagado la factura.', 'success')
+    else
+        TriggerClientEvent('QBCore:Notify', reciever, 'La id ' .. src .. 'ha declinado la factura.', 'error')
+    end
+end)
+
+QBCore.Commands.Add('facturar', 'Facturar a un jugador', {{name = 'id', help = 'ID'}, {name = 'cantidad', help = 'Cantidad de la factura'}}, false, function(source, args)
     local biller = QBCore.Functions.GetPlayer(source)
     local billed = QBCore.Functions.GetPlayer(tonumber(args[1]))
     local amount = tonumber(args[2])
-    if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' then
+    if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'taxi' then
         if billed ~= nil then
             if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                 if amount and amount > 0 then
@@ -1075,18 +1086,18 @@ QBCore.Commands.Add('bill', 'Bill A Player', {{name = 'id', help = 'Player ID'},
                         {billed.PlayerData.citizenid, amount, biller.PlayerData.job.name,
                          biller.PlayerData.charinfo.firstname, biller.PlayerData.citizenid})
                     TriggerClientEvent('qb-phone:RefreshPhone', billed.PlayerData.source)
-                    TriggerClientEvent('QBCore:Notify', source, 'Invoice Successfully Sent', 'success')
-                    TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'New Invoice Received')
+                    TriggerClientEvent('QBCore:Notify', source, 'Factura enviada', 'success')
+                    TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, 'Tienes una nueva factura')
                 else
-                    TriggerClientEvent('QBCore:Notify', source, 'Must Be A Valid Amount Above 0', 'error')
+                    TriggerClientEvent('QBCore:Notify', source, 'Debes poner una cantidad válida superior a $0', 'error')
                 end
             else
-                TriggerClientEvent('QBCore:Notify', source, 'You Cannot Bill Yourself', 'error')
+                TriggerClientEvent('QBCore:Notify', source, 'No puedes facturarte a ti mismo/a', 'error')
             end
         else
-            TriggerClientEvent('QBCore:Notify', source, 'Player Not Online', 'error')
+            TriggerClientEvent('QBCore:Notify', source, 'No se ha encontrado la ID del jugador', 'error')
         end
     else
-        TriggerClientEvent('QBCore:Notify', source, 'No Access', 'error')
+        TriggerClientEvent('QBCore:Notify', source, 'No dispones de permisos para facturar', 'error')
     end
 end)

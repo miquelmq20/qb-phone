@@ -1,3 +1,4 @@
+
 var WhatsappSearchActive = false;
 var OpenedChatPicture = null;
 var ExtraButtonsOpen = false;
@@ -79,14 +80,21 @@ $(document).on('click', '#whatsapp-openedchat-back', function(e){
     OpenedChatPicture = null;
 });
 
+function calcTime(offset) {
+    d = new Date();
+    utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+    nd = new Date(utc + (3600000*offset));
+    return nd;
+}
+
 QB.Phone.Functions.GetLastMessage = function(messages) {
-    var CurrentDate = new Date();
+    var CurrentDate = calcTime(-8)//new Date();
     var CurrentMonth = CurrentDate.getMonth();
     var CurrentDOM = CurrentDate.getDate();
     var CurrentYear = CurrentDate.getFullYear();
     var LastMessageData = {
         time: "00:00",
-        message: "nothing"
+        message: "..."
     }
 
     $.each(messages[messages.length - 1], function(i, msg){
@@ -103,7 +111,7 @@ QB.Phone.Functions.GetLastMessage = function(messages) {
 }
 
 GetCurrentDateKey = function() {
-    var CurrentDate = new Date();
+    var CurrentDate = calcTime(-8);
     var CurrentMonth = CurrentDate.getMonth();
     var CurrentDOM = CurrentDate.getDate();
     var CurrentYear = CurrentDate.getFullYear();
@@ -145,8 +153,7 @@ QB.Phone.Functions.ReloadWhatsappAlerts = function(chats) {
     });
 }
 
-const monthNames = ["January", "February", "March", "April", "May", "June", "JulY", "August", "September", "October", "November", "December"];
-
+const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 FormatChatDate = function(date) {
     var TestDate = date.split("-");
     var NewDate = new Date((parseInt(TestDate[1]) + 1)+"-"+TestDate[0]+"-"+TestDate[2]);
@@ -160,14 +167,14 @@ FormatChatDate = function(date) {
 
     var ReturnedValue = ChatDate;
     if (CurrentDate == CurDateee) {
-        ReturnedValue = "Today";
+        ReturnedValue = "Hoy";
     }
 
     return ReturnedValue;
 }
 
 FormatMessageTime = function() {
-    var NewDate = new Date();
+    var NewDate = calcTime(-8);
     var NewHour = NewDate.getHours();
     var NewMinute = NewDate.getMinutes();
     var Minutessss = NewMinute;
@@ -233,7 +240,7 @@ $(document).on('click', '#send-location', function(e){
     $.post('https://qb-phone/SendMessage', JSON.stringify({
         ChatNumber: OpenedChatData.number,
         ChatDate: GetCurrentDateKey(),
-        ChatMessage: "Shared location",
+        ChatMessage: "Ubicación compartida",
         ChatTime: FormatMessageTime(),
         ChatType: "location",
     }));
@@ -295,7 +302,7 @@ QB.Phone.Functions.SetupChatMessages = function(cData, NewChatData) {
                 if (message.type == "message") {
                     MessageElement = '<div class="whatsapp-openedchat-message whatsapp-openedchat-message-'+Sender+'">'+message.message+'<div class="whatsapp-openedchat-message-time">'+message.time+'</div></div><div class="clearfix"></div>'
                 } else if (message.type == "location") {
-                    MessageElement = '<div class="whatsapp-openedchat-message whatsapp-openedchat-message-'+Sender+' whatsapp-shared-location" data-x="'+message.data.x+'" data-y="'+message.data.y+'"><span style="font-size: 1.2vh;"><i class="fas fa-map-marker-alt" style="font-size: 1vh;"></i> Location</span><div class="whatsapp-openedchat-message-time">'+message.time+'</div></div><div class="clearfix"></div>'
+                    MessageElement = '<div class="whatsapp-openedchat-message whatsapp-openedchat-message-'+Sender+' whatsapp-shared-location" data-x="'+message.data.x+'" data-y="'+message.data.y+'"><span style="font-size: 1.2vh;"><i class="fas fa-map-marker-alt" style="font-size: 1vh;"></i> Ubicación</span><div class="whatsapp-openedchat-message-time">'+message.time+'</div></div><div class="clearfix"></div>'
                 } else if (message.type == "picture") {
                     MessageElement = '<div class="whatsapp-openedchat-message whatsapp-openedchat-message-'+Sender+'" data-id='+OpenedChatData.number+'><img class="wppimage" src='+message.data.url +'  style=" border-radius:4px; width: 100%; position:relative; z-index: 1; right:1px;height: auto;"></div><div class="whatsapp-openedchat-message-time">'+message.time+'</div></div><div class="clearfix"></div>'
                 }
@@ -319,7 +326,7 @@ QB.Phone.Functions.SetupChatMessages = function(cData, NewChatData) {
 
         $(".whatsapp-openedchat-name").html("<p>"+NewChatData.name+"</p>");
         $(".whatsapp-openedchat-messages").html("");
-        var NewDate = new Date();
+        var NewDate = calcTime(-8);
         var NewDateMonth = NewDate.getMonth();
         var NewDateDOM = NewDate.getDate();
         var NewDateYear = NewDate.getFullYear();

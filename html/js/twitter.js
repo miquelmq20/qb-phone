@@ -89,7 +89,7 @@ QB.Phone.Notifications.LoadTweets = function(Tweets) {
                 ALLOWED_TAGS: [],
                 ALLOWED_ATTR: []
             });
-            if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
+            if (clean == '') clean = 'No estoy preparado para hacer lo que intentas...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
             var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
 
@@ -147,7 +147,7 @@ QB.Phone.Notifications.LoadMentionedTweets = function(Tweets) {
                 ALLOWED_TAGS: [],
                 ALLOWED_ATTR: []
             });
-            if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
+            if (clean == '') clean = 'No estoy preparado para hacer lo que intentas...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
             var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
 
@@ -228,7 +228,7 @@ $(document).on('click', '#send-tweet', function(e){
         })
         QB.Phone.Animations.TopSlideUp(".twitter-new-tweet-tab", 450, -120);
     } else {
-        QB.Phone.Notifications.Add("fab fa-twitter", "Twitter", "Fill a message!", "#1DA1F2");
+        QB.Phone.Notifications.Add("fab fa-twitter", "Twitter", "Debes poner algún mensaje para poder enviarlo", "#1DA1F2");
     };
     $('#tweet-new-url').val("");
     $("#tweet-new-message").val("");
@@ -281,7 +281,7 @@ function CopyMentionTag(elem) {
     var $temp = $("<input>");
     $("body").append($temp);
     $temp.val($(elem).data('mentiontag')).select();
-    QB.Phone.Notifications.Add("fab fa-twitter", "Twitter", $(elem).data('mentiontag')+ " copied!", "rgb(27, 149, 224)", 1250);
+    QB.Phone.Notifications.Add("fab fa-twitter", "Twitter", $(elem).data('mentiontag')+ " copiado", "rgb(27, 149, 224)", 1250);
     document.execCommand("copy");
     $temp.remove();
 }
@@ -317,7 +317,7 @@ QB.Phone.Notifications.LoadHashtagMessages = function(Tweets) {
                 ALLOWED_TAGS: [],
                 ALLOWED_ATTR: []
             });
-            if (clean == '') clean = 'Hmm, I shouldn\'t be able to do this...'
+            if (clean == '') clean = 'No estoy preparado para hacer lo que intentas...'
             var TwtMessage = QB.Phone.Functions.FormatTwitterMessage(clean);
             var TimeAgo = moment(Tweet.date).format('MM/DD/YYYY hh:mm');
 

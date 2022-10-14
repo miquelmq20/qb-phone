@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./css/trucker.css">
     <link rel="stylesheet" href="./css/gallery.css">
     <link rel="stylesheet" href="./css/camera.css">
+    <link rel="stylesheet" href="./css/calculator.css">
 
     <!-- CDN's -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <!-- JQuery -->
@@ -53,7 +54,7 @@
                     <div id="player-id">1</div>
                     <div id="phone-time">08:05</div>
                     <div id="phone-icons">
-                        <i class="fas fa-signal" id="phone-signal" data-toggle="tooltip" data-placement="left" title="QBCore 5G"></i>
+                        <i class="fas fa-signal" id="phone-signal" data-toggle="tooltip" data-placement="left" title="CosmosNET"></i>
                         <i class="fas fa-battery-three-quarters" id="phone-battery"></i>
                     </div>
                 </div>
@@ -66,6 +67,7 @@
                 </div>
 
                 <!-- Home Applications -->
+
                 <div class="phone-applications">
                     <div class="phone-footer-applications">
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="1"></div>
@@ -86,17 +88,17 @@
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="12"></div>
 
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="13"></div>
-                        <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="14"></div>
+                        <!--<div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="14"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="15"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="16"></div>
 
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="17"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="18"></div>
                         <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="19"></div>
-                        <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="20"></div>
+                        <div class="phone-application" data-toggle="tooltip" data-placement="bottom" title="" data-appslot="20"></div>-->
+                        <div class="phone-footer-applications2"></div>
                     </div>
                 </div>
-
 
                 <!-- Unread Alerts -->
                 <!-- <div class="app-unread-alerts">1</div> -->
@@ -104,19 +106,18 @@
                 <!-- Container for all application's -->
                 <div class="phone-application-container">
                     <div class="settings-app">
-                        <div class="settings-app-header"><i class="fas fa-cogs"></i></div>
+                        <div class="settings-app-header"><p>Ajustes del teléfono</p></div>
 
                         <div class="settings-app-tab-appereance">
                             <!-- <div class="settings-app-tab-header"><p>Appearance</p></div> -->
-                            <div class="settings-app-tab" data-settingstab="background">
-                                <div class="settings-tab-icon"><i class="fas fa-palette" style="color: #9b59b6;"></i></div>
-                                <div class="settings-tab-title"><p>Background</p></div>
-                                <div class="settings-tab-description"><p>Default</p></div>
-                            </div>
-                            <div class="settings-app-tab" data-settingstab="profilepicture">
+                            <div class="settings-app-tab" data-settingstab="profilepicture" style="margin-top: 0.5vh; height: 8.2vh;">
                                 <div class="settings-tab-icon"></div>
-                                <div class="settings-tab-title"><p>Avatar</p></div>
-                                <div class="settings-tab-description"><p>Default</p></div>
+                                <div class="settings-tab-title2"><p>Usuario principal</p></div>
+                                <div class="settings-tab-description2"><p>Editar mi perfil</p></div>
+                            </div>
+                            <div class="settings-app-tab" data-settingstab="background" style="margin-top: 1vh;">
+                                <div class="settings-tab-icon"><i class="fas fa-pen-square" style="color: #000000;"></i></div>
+                                <div class="settings-tab-title1"><p>Fondo de pantalla</p></div>
                             </div>
                         </div>
 
@@ -124,15 +125,16 @@
                         <div class="settings-app-tab-information">
                             <!-- <div class="settings-app-tab-header"><p>Infomation</p></div> -->
                             <div class="settings-app-tab secondTab" data-settingstab="myPhone">
-                                <div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i></div>
-                                <div class="settings-tab-title"><p>My phone number</p></div>
+                                <div class="settings-tab-icon"><i class="fas fa-phone-square-alt" style="color: #000000;"></i></div>
+                                <div class="settings-tab-title"><p>Mi número de teléfono</p></div>
                                 <div class="settings-tab-description" id="myPhoneNumber"><p>0612345678</p></div>
                             </div>
                             <div class="settings-app-tab secondTab" data-settingstab="serialNumber">
-                                <div class="settings-tab-icon"><i class="fas fa-phone-alt" style="color: #e67e22;"></i></div>
-                                <div class="settings-tab-title"><p>Serial Number</p></div>
+                                <div class="settings-tab-icon"><i class="fas fa-th" style="color: #000000;"></i></div>
+                                <div class="settings-tab-title"><p>ID del teléfono</p></div>
                                 <div class="settings-tab-description" id="mySerialNumber"><p>0612345678</p></div>
                             </div>
+                            <hr>
                             <div class="settings-app-tab secondTab" data-settingstab="numberrecognition">
                                 <!-- Rounded switch -->
                                 <label class="switch">
@@ -140,45 +142,48 @@
                                     <span class="slider round"></span>
                                 </label>
 
-                                <div class="settings-tab-icon"><i class="fas fa-user-slash" style="color: #e67e22;"></i></div>
-                                <div class="settings-tab-title"><p>Call Anonymously</p></div>
-                                <div class="settings-tab-description" id="numberrecognition"><p>Off</p></div>
+                                <div class="settings-tab-icon"><i class="fas fa-user-secret" style="color: #000000;"></i></div>
+                                <div class="settings-tab-title"><p>Llamar en anónimo</p></div>
+                                <div class="settings-tab-description" id="numberrecognition"><p>Deshabilitado</p></div>
                             </div>
+                            <p> </p>
+                            <p>iFruitOS 1.0.3<br> made with 🖤 by Cosmos Roleplay & QB Core team</p>
+                            <p></p>
                         </div>
 
                         <div class="settings-background-tab">
-                            <div class="settings-app-header"><p>Background</p></div>
+                            <div class="settings-app-header"><p>Fondo de pantalla</p></div>
 
                             <div class="background-options">
                                 <div class="background-option" data-background="default-qbcore">
                                     <div class="background-option-icon"> <i class="fas fa-paint-brush"></i> </div>
-                                    <div class="background-option-title"> Default </div>
-                                    <div class="background-option-description">Default background</div>
+                                    <div class="background-option-title"> Por defecto </div>
+                                    <div class="background-option-description">Fondo por defecto</div>
                                     <div class="background-option-current"><i class="fas fa-check-circle"></i></div>
                                 </div>
                                 <div class="background-option" data-background="custom-background">
                                     <div class="background-option-icon"><i class="fas fa-paint-brush"></i></div>
-                                    <div class="background-option-title">Custom</div>
-                                    <div class="background-option-description">Personalize your background</div>
+                                    <div class="background-option-title">Personalizado</div>
+                                    <div class="background-option-description">Personalizar fondo</div>
                                 </div>
                             </div>
 
                             <div class="background-buttons">
-                                <div class="background-button" id="accept-background">
-                                    <p>Confirm</p>
-                                </div>
                                 <div class="background-button" id="cancel-background">
-                                    <p>Cancel</p>
+                                    <p>Cancelar</p>
+                                </div>
+                                <div class="background-button1" id="accept-background">
+                                    <p>Aceptar</p>
                                 </div>
                             </div>
 
                             <div class="background-custom">
-                                <div class="background-custom-title">Personalized Background</div>
+                                <div class="background-custom-title">Fondo de pantalla personalizado</div>
                                 <input type="text" class="custom-background-input" placeholder="URL (.jpg/.png)" spellcheck="false">
 
                                 <div class="background-custom-buttons">
-                                    <div class="custom-background-button" id="accept-custom-background"><p>Confirm</p></div>
-                                    <div class="custom-background-button" id="cancel-custom-background"><p>Cancel</p></div>
+                                    <div class="custom-background-button" id="cancel-custom-background"><p>Cancelar</p></div>
+                                    <div class="custom-background-button1" id="accept-custom-background"><p>Aceptar</p></div>
                                 </div>
                             </div>
                         </div>
@@ -189,38 +194,38 @@
                             <div class="profilepicture-options">
                                 <div class="profilepicture-option" data-profilepicture="default">
                                     <div class="profilepicture-option-icon"> <i class="fas fa-paint-brush"></i> </div>
-                                    <div class="profilepicture-option-title"> Default </div>
-                                    <div class="profilepicture-option-description">Default avatar</div>
+                                    <div class="profilepicture-option-title"> Por defecto </div>
+                                    <div class="profilepicture-option-description">Avatar por defecto</div>
                                     <div class="profilepicture-option-current"><i class="fas fa-check-circle"></i></div>
                                 </div>
                                 <div class="profilepicture-option" data-profilepicture="custom-profilepicture">
                                     <div class="profilepicture-option-icon"><i class="fas fa-paint-brush"></i></div>
-                                    <div class="profilepicture-option-title">Custom</div>
-                                    <div class="profilepicture-option-description">Personalize your avatar</div>
+                                    <div class="profilepicture-option-title">Personalizado</div>
+                                    <div class="profilepicture-option-description">Personaliza tu avatar</div>
                                 </div>
-                                <div class="profilepicture-option" data-profilepicture="camera-profilepicture">
+                                <!--<div class="profilepicture-option" data-profilepicture="camera-profilepicture">
                                     <div class="profilepicture-option-icon"><i class="fas fa fa-camera"></i></div>
                                     <div class="profilepicture-option-title">Photo - Coming Soon</div>
                                     <div class="profilepicture-option-description">Set your profile picture with a photo</div>
-                                </div>
+                                </div>-->
                             </div>
 
                             <div class="profilepicture-buttons">
-                                <div class="profilepicture-button" id="accept-profilepicture">
-                                    <p>Confirm</p>
-                                </div>
                                 <div class="profilepicture-button" id="cancel-profilepicture">
-                                    <p>Cancel</p>
+                                    <p>Cancelar</p>
+                                </div>
+                                <div class="profilepicture-button2" id="accept-profilepicture">
+                                    <p>Aceptar</p>
                                 </div>
                             </div>
 
                             <div class="profilepicture-custom">
-                                <div class="profilepicture-custom-title">Personalized Avatar</div>
+                                <div class="profilepicture-custom-title">Perfil personalizado</div>
                                 <input type="text" class="custom-profilepicture-input" placeholder="URL (.jpg/.png)" spellcheck="false">
 
                                 <div class="profilepicture-custom-buttons">
-                                    <div class="custom-profilepicture-button" id="accept-custom-profilepicture"><p>Confirm</p></div>
-                                    <div class="custom-profilepicture-button" id="cancel-custom-profilepicture"><p>Cancel</p></div>
+                                    <div class="custom-profilepicture-button" id="cancel-custom-profilepicture"><p>Cancelar</p></div>
+                                    <div class="custom-profilepicture-button2" id="accept-custom-profilepicture"><p>Aceptar</p></div>
                                 </div>
                             </div>
                         </div>
@@ -228,8 +233,8 @@
 
                     <div class="phone-call-app">
                         <div class="phone-call-incoming">
-                            <div class="phone-call-incoming-title">Incoming Call</div>
-                            <div class="phone-call-incoming-caller">Unknown Number</div>
+                            <div class="phone-call-incoming-title">Llamada entrante</div>
+                            <div class="phone-call-incoming-caller">Desconocido</div>
                             <div class="phone-call-incoming-picture"></div>
 
                             <i class="fas fa-phone" id="incoming-answer"></i>
@@ -256,8 +261,8 @@
 
                     <div class="phone-app">
                         <div class="phone-app-header">
-                            <p>Contacts</p>
-                            <span id="total-contacts">0 contacts</span>
+                            <p>Contactos</p>
+                            <span id="total-contacts">0 contactos</span>
                         </div>
 
                         <div class="phone-contacts">
@@ -272,7 +277,7 @@
                         </div>
 
                         <div class="phone-recent">
-                            <div class="phone-recent-header"><p>Recent Call History</p></div>
+                            <div class="phone-recent-header"><p>Historial de llamadas</p></div>
 
                             <div class="phone-recent-calls">
                                 <!-- <div class="phone-recent-call"> <div class="phone-recent-call-image">P</div> <div class="phone-recent-call-name">Pieter Post</div> <div class="phone-recent-call-type"><i class="fas fa-phone-slash"></i></div> <div class="phone-recent-call-time">12:05</div> </div> -->
@@ -281,8 +286,8 @@
 
                         <div class="phone-suggestedcontacts">
                             <div class="phone-suggestedcontacts-header">
-                                Suggested Contacts
-                                <p class="amount-of-suggested-contacts">0 contacts</p>
+                                Contactos sugeridos
+                                <p class="amount-of-suggested-contacts">0 contactos</p>
                             </div>
 
                             <div class="suggested-contacts">
@@ -310,39 +315,39 @@
                         </div>
 
                         <div class="phone-add-contact">
-                            <div class="phone-add-contact-header"><p>Add Contact</p></div>
+                            <div class="phone-add-contact-header"><p>Añadir un contacto</p></div>
 
                             <i id="phone-add-contact-name-icon" class="fas fa-user"></i>
-                            <input type="text" class="phone-add-contact-name" placeholder="Contact Name" required spellcheck="false">
+                            <input type="text" class="phone-add-contact-name" placeholder="Nombre del contacto" required spellcheck="false">
 
                             <i id="phone-add-contact-number-icon" class="fas fa-phone-alt"></i>
-                            <input type="number" class="phone-add-contact-number" placeholder="Phone number" required spellcheck="false">
+                            <input type="number" class="phone-add-contact-number" placeholder="Número de teléfono" required spellcheck="false">
 
                             <i id="phone-add-contact-iban-icon" class="fas fa-money-check"></i>
-                            <input type="text" class="phone-add-contact-iban" placeholder="Bank nr. (Not required)" required spellcheck="false">
+                            <input type="text" class="phone-add-contact-iban" placeholder="ID bancario. (opcional)" required spellcheck="false">
 
                             <div class="phone-add-contact-buttons">
-                                <div class="phone-add-contact-button" id="add-contact-save"><p>Save</p></div>
-                                <div class="phone-add-contact-button" id="add-contact-cancel"><p>Cancel</p></div>
+                                <div class="phone-add-contact-button" id="add-contact-save"><p>Guardar</p></div>
+                                <div class="phone-add-contact-button" id="add-contact-cancel"><p>Cancelar</p></div>
                             </div>
                         </div>
 
                         <div class="phone-edit-contact">
-                            <div class="phone-edit-contact-header"><p>Add Contact</p></div>
+                            <div class="phone-edit-contact-header"><p>Añadir un contacto</p></div>
 
                             <i id="phone-edit-contact-name-icon" class="fas fa-user"></i>
-                            <input type="text" class="phone-edit-contact-name" placeholder="Contact Name" required spellcheck="false">
+                            <input type="text" class="phone-edit-contact-name" placeholder="Nombre del contacto" required spellcheck="false">
 
                             <i id="phone-edit-contact-number-icon" class="fas fa-phone-alt"></i>
-                            <input type="number" class="phone-edit-contact-number" placeholder="Phone number" required spellcheck="false">
+                            <input type="number" class="phone-edit-contact-number" placeholder="Número de teléfono" required spellcheck="false">
 
                             <i id="phone-edit-contact-iban-icon" class="fas fa-money-check"></i>
-                            <input type="text" class="phone-edit-contact-iban" placeholder="Bank nr. (Not required)" required spellcheck="false">
+                            <input type="text" class="phone-edit-contact-iban" placeholder="ID bancario (opcional)" required spellcheck="false">
 
                             <div class="phone-edit-contact-buttons">
-                                <div class="phone-edit-contact-button" id="edit-contact-save"><p>Save</p></div>
-                                <div class="phone-edit-contact-button" id="edit-contact-delete"><p>Delete</p></div>
-                                <div class="phone-edit-contact-button" id="edit-contact-cancel"><p>Cancel</p></div>
+                                <div class="phone-edit-contact-button" id="edit-contact-save"><p>Guardar</p></div>
+                                <div class="phone-edit-contact-button" id="edit-contact-delete"><p>Elminar</p></div>
+                                <div class="phone-edit-contact-button" id="edit-contact-cancel"><p>Cancelar</p></div>
                             </div>
                         </div>
 
@@ -362,7 +367,41 @@
                         </div>
                     </div>
 
-                    <div class="houses-app">
+                    <div class="calculator-app">
+                        <div class="calculator-cover">
+                            <form class="calculator-input" name="form" action="">
+                                <input class="calculator-text" name="text" type="text" onkeypress="CalculatorCorrect(event)" value="0"/>
+                            </form>
+                    
+                            <div class="calculator-buttons">
+                                <div class="calculator-button calculator-operator-others" onclick="CalculatorClearAll()"><span>AC</span></div>
+                                <div class="calculator-button calculator-operator-others" onclick="CalculatorAddKey('±')"><span>±</span></div>
+                                <div class="calculator-button calculator-operator-others" onclick="CalculatorAddKey('%')"><span>%</span></div>
+                                <div class="calculator-button calculator-operator" onclick="CalculatorAddKey('/')"><span>÷</span></div>
+
+                                <div class="calculator-button" onclick="CalculatorAddKey('7')"><span>7</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('8')"><span>8</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('9')"><span>9</span></div>
+                                <div class="calculator-button calculator-operator" onclick="CalculatorAddKey('*')"><span>X</span></div>
+                                
+                                <div class="calculator-button" onclick="CalculatorAddKey('4')"><span>4</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('5')"><span>5</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('6')"><span>6</span></div>
+                                <div class="calculator-button calculator-operator" onclick="CalculatorAddKey('-')"><span>-</span></div>
+                                
+                                <div class="calculator-button" onclick="CalculatorAddKey('1')"><span>1</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('2')"><span>2</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('3')"><span>3</span></div>
+                                <div class="calculator-button calculator-operator" onclick="CalculatorAddKey('+')"><span>+</span></div>
+
+                                <div class="calculator-double-button" onclick="CalculatorAddKey('0')"><span>0</span></div>
+                                <div class="calculator-button" onclick="CalculatorAddKey('.')"><span>.</span></div>
+                                <div class="calculator-button calculator-operator" onclick="CalculatorCalculate()"><span>=</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="housesoff-app">
                         <div class="houses-app-header">
                             <div class="houses-app-header-tab houses-app-header-tab-selected" data-housetab="myhouses"><p>My Houses</p></div>
                             <div class="houses-app-header-tab" data-housetab="mykeys"><p>My Keys</p></div>
@@ -407,11 +446,11 @@
                                 <div class="myhouses-option" id="myhouse-option-keys-back">RETURN</div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="garage-app">
                         <div class="garage-app-header">
-                            My Garage
+                            Garaje
                         </div>
                         <div class="garage-homescreen">
                             <div class="garage-vehicles">
@@ -420,22 +459,22 @@
 
                          <div class="garage-detailscreen">
                             <div class="garage-cardetails">
-                                <div class="vehicle-brand"><span class="vehicle-detail">Brand</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-model"><span class="vehicle-detail">Model</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-plate"><span class="vehicle-detail">License Plate</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-garage"><span class="vehicle-detail">Garage</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-status"><span class="vehicle-detail">Status</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-brand"><span class="vehicle-detail">Marca</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-model"><span class="vehicle-detail">Modelo</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-plate"><span class="vehicle-detail">Matrícula</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-garage"><span class="vehicle-detail">Ubicación</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-status"><span class="vehicle-detail">Estado</span><span class="vehicle-answer">COSMOS RP</span></div>
                                 &nbsp;
-                                <div class="vehicle-fuel"><span class="vehicle-detail">Fuel</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-engine"><span class="vehicle-detail">Engine</span><span class="vehicle-answer">BMW M5</span></div>
-                                <div class="vehicle-body"><span class="vehicle-detail">Bodywork</span><span class="vehicle-answer">BMW M5</span></div>
+                                <div class="vehicle-fuel"><span class="vehicle-detail">Gasolina</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-engine"><span class="vehicle-detail">Motor</span><span class="vehicle-answer">COSMOS RP</span></div>
+                                <div class="vehicle-body"><span class="vehicle-detail">Carrocería</span><span class="vehicle-answer">COSMOS RP</span></div>
 
                                 <div class="return-track">
                                     <div id="return-button">
-                                        RETURN
+                                        Volver
                                     </div>
-                                    <div id="track-vehicle">
-                                        TRACK
+                                    <div id="track-vehicle" style="background-color:rgb(36, 103, 192)">
+                                        Localizar
                                     </div>
                                 </div>
                             </div>
@@ -444,7 +483,7 @@
 
                     <div class="gallery-app">
                         <div class="gallery-app-header">
-                            My Gallery
+                            Galería
                         </div>
                         <div class="gallery-homescreen">
                             <div class="gallery-images">
@@ -456,7 +495,7 @@
                                 <div class="imagedata"><img class="image" id="imagedata" style="width: 100%;" src="" alt=""></div>
                                 <div class="make-post-button">
                                     <div id="make-post-button">
-                                        POST
+                                        Publicar
                                     </div>
                                     <div id="delete-button">
                                         <i class="fas fa-trash-alt"></i>
@@ -464,7 +503,7 @@
                                 </div>
                                 <div class="return-button">
                                     <div id="return-button">
-                                        RETURN
+                                        Volver
                                     </div>
                                 </div>
                             </div>
@@ -482,7 +521,7 @@
                                 </div>
                                 <div class="return-button">
                                     <div id="returndetail-button">
-                                        RETURN
+                                        Volver
                                     </div>
                                 </div>
                             </div>
@@ -496,7 +535,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="trucker-app">
                         <div class="trucker-header">
                             <span class="trucker-header-name"><span style="font-size: 1vh; color: rgba(255, 255, 255, 0.6);">Welcome</span><br><span id="trucker-name">Jay Yay</span></span>
@@ -746,7 +784,7 @@
                     <div class="advert-app">
                         <div class="advert-home">
                             <div class="advert-header">
-                                <span id="advert-header-text">Advertisements</span>
+                                <span id="advert-header-text">Anuncios</span>
                                 <span id="advert-header-name"></span>
                             </div>
                             <div class="advert-list">
@@ -759,11 +797,11 @@
 
                         <div class="new-advert">
                             <div class="new-advert-header">
-                                <span id="new-advert-header-text">New advertisement</span>
+                                <span id="new-advert-header-text">Nuevo anuncio</span>
                             </div>
 
-                            <textarea class="new-advert-textarea" spellcheck="false" required></textarea>
-                            <span><textarea id="advert-new-url" style="text-align:left; padding-left:15px;" placeholder="Picture URL" cols="30" rows="10" spellcheck="false"></textarea></span>
+                            <textarea class="new-advert-textarea" spellcheck="false" placeholder="Texto que quieras publicar" required></textarea>
+                            <span><textarea id="advert-new-url" style="text-align:left; padding-left:15px;" placeholder="URL de la imagen" cols="30" rows="10" spellcheck="false"></textarea></span>
 
                             <div class="new-advert-footer">
                                 <div class="new-advert-footer-item" id="new-advert-submit">
@@ -782,9 +820,9 @@
                     <div class="mail-app">
                         <div class="mail-home">
                             <div class="mail-header">
-                                <span id="mail-header-text">Inbox</span>
+                                <span id="mail-header-text">Correo eléctronico</span>
                                 <span id="mail-header-mail">jay.nandes@qbcore.com</span>
-                                <span id="mail-header-lastsync">Last synchronization 18:31</span>
+                                <span id="mail-header-lastsync" style="color:rgb(36, 36, 36); margin-top: 0.3vh;">Last synchronization 18:31</span>
                             </div>
 
                             <div class="mail-list">
@@ -794,11 +832,11 @@
                         <div class="opened-mail">
                             <div class="opened-mail-header">
                                 <div class="mail-back"><i class="fas fa-chevron-left" id="mail-back"></i></div>
-                                <div class="mail-subject"><p>Subject</p></div>
-                                <div class="mail-date"><p>19 February 2019 &nbsp; 08:19</p></div>
+                                <div class="mail-subject"><p>Usuario</p></div>
+                                <div class="mail-date"><p>19 Febrero 2019 &nbsp; 08:19</p></div>
                                 <div class="mail-spacing"></div>
                                 <div class="mail-content"><p>
-                                    This is a test mail and will not be fully shown because thats what I'm testing.
+                                    Correo de testeo.
                                 </p></div>
                             </div>
                             <div class="opened-mail-footer">
@@ -951,11 +989,11 @@
                     <div class="twitter-app">
 
                         <div class="twitter-home-tab">
-                             <div class="twitter-no-tweets"><p>No tweets</p></div>
+                             <!--<div class="twitter-no-tweets"><p>Ningún tweet...</p></div>-->
                         </div>
 
                         <div class="twitter-mentions-tab">
-                            <div class="twitter-no-tweets"><p>No mentions</p></div>
+                            <!--<div class="twitter-no-tweets"><p>Ninguna mención...</p></div>-->
                         </div>
 
                         <div class="twitter-hashtags-tab">
@@ -964,7 +1002,7 @@
                                 </div>
                             </div>
                             <div class="twitter-hashtags">
-                                <div class="twitter-no-tweets"><p>No hashtags</p></div>
+                                <!--<div class="twitter-no-tweets"><p>Ningún hashtag</p></div>-->
                             </div>
                         </div>
 
@@ -973,14 +1011,14 @@
                         </div>
 
                         <div class="twitter-new-tweet-tab">
-                            <div class="twitter-new-tweet-header"><p>New Tweet</p></div>
+                            <div class="twitter-new-tweet-header"><p>Nuevo tweet</p></div>
 
-                            <textarea id="tweet-new-message" placeholder="Twitter message" cols="30" rows="10" spellcheck="false" required></textarea>
-                            <span><textarea id="tweet-new-url" style="text-align:left; padding-left:15px;" placeholder="Picture URL" cols="30" rows="10" spellcheck="false"></textarea></span>
+                            <textarea id="tweet-new-message" placeholder="¿Qué está pasando?" cols="30" rows="10" spellcheck="false" required></textarea>
+                            <span><textarea id="tweet-new-url" style="text-align:left; padding-left:15px;" placeholder="URL de la imagen" cols="30" rows="10" spellcheck="false"></textarea></span>
                             <div class="twitter-new-tweet-buttons">
-                                <div class="twitter-new-tweet-button" id="send-tweet"><p>Send</p></div>
-                                <div class="twitter-new-tweet-button" id="take-pic"><p>Take Pic</p></div>
-                                <div class="twitter-new-tweet-button" id="cancel-tweet"><p>Cancel</p></div>
+                                <div class="twitter-new-tweet-button" id="send-tweet"><p>Enviar</p></div>
+                                <div class="twitter-new-tweet-button" id="take-pic"><p>Foto</p></div>
+                                <div class="twitter-new-tweet-button" id="cancel-tweet"><p>Cancelar</p></div>
                             </div>
                         </div>
 
@@ -994,17 +1032,17 @@
                     <div class="bank-app">
                         <div class="bank-app-loading">
                             <img src="../html/img/apps/bank-logo.png" class="qbank-logo">
-                            <span id="qbank-text">Bank</span>
+                            <!--<span id="qbank-text">Bank</span>-->
                         </div>
                         <div class="bank-app-loaded">
                             <div class="bank-app-header">
-                                <div data-headertype="accounts" class="bank-app-header-button bank-app-header-button-selected"> <i class="fas fa-align-left"></i> <p>Accounts</p> </div>
-                                <div data-headertype="invoices" class="bank-app-header-button"> <i class="fas fa-file-invoice"></i> <p>Invoices</p> </div>
+                                <div data-headertype="accounts" class="bank-app-header-button bank-app-header-button-selected"> <i class="fas fa-align-left"></i> <p>Mi cuenta</p> </div>
+                                <div data-headertype="invoices" class="bank-app-header-button"> <i class="fas fa-file-invoice"></i> <p>Facturas</p> </div>
                             </div>
 
                             <div class="bank-app-accounts">
                                 <div class="bank-app-account">
-                                    <div class="bank-app-account-title">Account</div>
+                                    <div class="bank-app-account-title">Cuenta</div>
                                     <!-- <div class="bank-app-account-number" id="iban-account">NL01QBBA012341234123</div> -->
                                     <input type="text" class="bank-app-account-number" id="iban-account" readonly spellcheck="false">
                                     <div class="bank-app-account-balance">&#36; 5000,00</div>
@@ -1016,7 +1054,7 @@
                             </div>
 
                             <div class="bank-app-transfer">
-                                <div class="bank-app-transfer-header">Transfer Money</div>
+                                <div class="bank-app-transfer-header">Transferir dinero</div>
 
                                 <i class="bank-transfer-iban-icon fas fa-credit-card"></i>
                                 <input type="text" id="bank-transfer-iban" class="bank-transfer-input" required spellcheck="false">
@@ -1026,8 +1064,8 @@
                                 <input type="number" min="0" oninput="this.value = Math.abs(this.value)" id="bank-transfer-amount" class="bank-transfer-input" required spellcheck="false">
 
                                 <div class="bank-app-transfer-buttons">
-                                    <div class="bank-app-transfer-button" id="accept-transfer">Transfer</div>
-                                    <div class="bank-app-transfer-button" id="cancel-transfer">Cancel</div>
+                                    <div class="bank-app-transfer-button" id="accept-transfer">Transferir</div>
+                                    <div class="bank-app-transfer-button" id="cancel-transfer">Cancelar</div>
                                 </div>
                             </div>
 
@@ -1054,9 +1092,9 @@
                         <div class="whatsapp-header">
                             <div class="whatsapp-header-top"></div>
                             <div class="whatsapp-header-footer">
-                                <p>Whatsapp</p>
+                                <p>WhatsApp</p>
                                 <i id="whatsapp-search-chats" class="fas fa-search"></i>
-                                <input type="text" id="whatsapp-search-input" placeholder="Contactname" spellcheck="false">
+                                <input type="text" id="whatsapp-search-input" placeholder="buscar..." spellcheck="false">
                             </div>
                         </div>
                         <div class="whatsapp-chats">
@@ -1074,18 +1112,59 @@
                             </div>
                             <div class="whatsapp-openedchat-input">
                                 <div class="whatsapp-extra-buttons">
-                                    <div class="whatsapp-extra-button" id="send-location"><i class="fas fa-map-marker-alt"></i></div>
-                                    <div class="whatsapp-extra-button" id="send-image"><i class="fas fa-camera"></i></div>
+                                    <div class="whatsapp-extra-button" id="send-location"><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Ubicación</p></div>-->
+                                    <!--<div class="whatsapp-photoadd" id="send-image"><i class="fas fa-camera"></i></div>-->
                                     <!-- <div class="whatsapp-extra-button" id="send-money"><i class="fas fa-money-bill"></i></div> -->
                                 </div>
-                                <input type="text" id="whatsapp-openedchat-message" placeholder="Message" spellcheck="false">
+                                <input type="text" id="whatsapp-openedchat-message" placeholder="Escribe aquí un mensaje" spellcheck="false">
                                 <i class="fas fa-paper-plane" id="whatsapp-openedchat-send"></i>
+                                <div class="whatsapp-photoadd" id="send-image"><i class="fas fa-camera"></i></div>
+                                <div class="marco-input">
                                 <i class="fas fa-ellipsis-v" id="whatsapp-openedchat-message-extras"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-
+            </div>
+                <!------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!--<div class="whatsapp-app">
+                        <div class="whatsapp-header">
+                            <div class="whatsapp-header-top"></div>
+                            <div class="whatsapp-header-footer">
+                                <p>WhatsApp</p>
+                                <i id="whatsapp-search-chats" class="fas fa-search"></i>
+                                <input type="text" id="whatsapp-search-input" placeholder="buscar..." spellcheck="false">
+                            </div>
+                        </div>
+                        <div class="whatsapp-chats">
+                        </div>
+                        <div class="whatsapp-openedchat">
+                            <div class="whatsapp-header-openedchat">
+                                <div class="whatsapp-header-top-openedchat"></div>
+                                <div class="whatsapp-header-footer-openedchat">
+                                    <div class="whatsapp-openedchat-picture"></div>
+                                    <div class="whatsapp-openedchat-name"><p></p></div>
+                                    <i id="whatsapp-openedchat-back" class="fas fa-arrow-left"></i>
+                                </div>
+                            </div>
+                            <div class="whatsapp-openedchat-messages">
+                            </div>
+                            <div class="whatsapp-openedchat-input">
+                                <div class="whatsapp-extra-buttons">
+                                    <div class="whatsapp-extra-button" id="send-location"><p><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;Ubicación</p></div>-->
+                                    <!--<div class="whatsapp-photoadd" id="send-image"><i class="fas fa-camera"></i></div>-->
+                                    <!-- <div class="whatsapp-extra-button" id="send-money"><i class="fas fa-money-bill"></i></div> --><!--
+                                </div>
+                                <input type="text" id="whatsapp-openedchat-message" placeholder="Escribe aquí un mensaje" spellcheck="false">
+                                <i class="fas fa-paper-plane" id="whatsapp-openedchat-send"></i>
+                                <div class="whatsapp-photoadd" id="send-image"><i class="fas fa-camera"></i></div>
+                                <i class="fas fa-ellipsis-v" id="whatsapp-openedchat-message-extras"></i>
+                                <div class="marco-input">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <!------------------------------------------------------------------------------------------------------------------------------------------->
                 <div class="phone-currentcall-container">
                     <div class="phone-currentcall-icon"><i class="fas fa-phone"></i></div>
                     <div class="phone-currentcall-title">Outgoing call</div>
@@ -1132,7 +1211,8 @@
         <script src="./js/trucker.js"></script>
         <script src="./js/gallery.js"></script>
         <script src="./js/camera.js"></script>
-        <script type="text/javascript">$('#whatsapp-openedchat-message').emojioneArea({inline: true, searchPosition: "bottom", shortnames: true})</script>
+        <script src="./js/calculator.js"></script>
+        <!--<script type="text/javascript">$('#whatsapp-openedchat-message').emojioneArea({inline: true, searchPosition: "bottom", shortnames: true})</script>-->
         <!-- <script type="text/javascript">$('#tweet-new-message').emojioneArea({pickerPostion: 'bottom' ,inline: true, shortnames: true})</script> -->
     </body>
 </html>

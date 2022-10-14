@@ -72,8 +72,8 @@ QB.Phone.Functions.SetupMails = function(Mails) {
     }
     var MessageTime = Hourssssss + ":" + Minutessss;
 
-    $("#mail-header-mail").html(QB.Phone.Data.PlayerData.charinfo.firstname+"."+QB.Phone.Data.PlayerData.charinfo.lastname+"@qbcore.com");
-    $("#mail-header-lastsync").html("Last synchronized "+MessageTime);
+    $("#mail-header-mail").html(QB.Phone.Data.PlayerData.charinfo.firstname+"."+QB.Phone.Data.PlayerData.charinfo.lastname+"@csmsrp.com");
+    $("#mail-header-lastsync").html("Sincronizado por última vez: "+MessageTime);
     if (Mails !== null && Mails !== undefined) {
         if (Mails.length > 0) {
             $(".mail-list").html("");
@@ -86,13 +86,13 @@ QB.Phone.Functions.SetupMails = function(Mails) {
                 $("#mail-"+mail.mailid).data('MailData', mail);
             });
         } else {
-            $(".mail-list").html('<p class="nomails">You don\'t have any mails..</p>');
+            $(".mail-list").html('<p class="nomails">Esto está vacío...</p>');
         }
 
     }
 }
 
-var MonthFormatting = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var MonthFormatting = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octube", "Noviembre", "Diciembre"];
 
 QB.Phone.Functions.SetupMail = function(MailData) {
     var date = new Date(MailData.date);
@@ -101,7 +101,7 @@ QB.Phone.Functions.SetupMail = function(MailData) {
     $(".mail-date").html("<p>"+DateString+"</p>");
     $(".mail-content").html("<p>"+MailData.message+"</p>");
 
-    var AcceptElem = '<div class="opened-mail-footer-item" id="accept-mail"><i class="fas fa-check-circle mail-icon"></i></div>';
+    var AcceptElem = '<div class="opened-mail-footer-item2" id="accept-mail"><i class="fas fa-check-circle mail-icon"></i></div>';
     var RemoveElem = '<div class="opened-mail-footer-item" id="remove-mail"><i class="fas fa-trash-alt mail-icon"></i></div>';
 
     $(".opened-mail-footer").html("");
@@ -180,7 +180,7 @@ $(document).on('click', '#new-advert-submit', function(e){
         $('#advert-new-url').val("")
         $(".new-advert-textarea").val("");
     } else {
-        QB.Phone.Notifications.Add("fas fa-ad", "Advertisement", "You can\'t post an empty ad!", "#ff8f1a", 2000);
+        QB.Phone.Notifications.Add("fas fa-ad", "Anuncios", "No puedes enviar un anuncio vacío", "#ff8f1a", 2000);
     }
 });
 
@@ -194,7 +194,7 @@ QB.Phone.Functions.RefreshAdverts = function(Adverts) {
                 ALLOWED_ATTR: []
             });
 
-            if (clean == '') { clean = 'I\'m a silly goose :/' }
+            if (clean == '') { clean = ':(' }
 
             if (advert.url) {
                 var element = `<div class="advert"><span class="advert-sender">${advert.name} | ${advert.number}</span><p>${clean}</p></br><img class="advimage" src=`+advert.url +` style=" border-radius:4px; width: 95%; position:relative; z-index: 1; right:1px;height: auto; bottom:1vh;"></br><span><div class="adv-icon"></div> </span></div>`;
@@ -210,7 +210,7 @@ QB.Phone.Functions.RefreshAdverts = function(Adverts) {
         });
     } else {
         $(".advert-list").html("");
-        var element = '<div class="advert"><span class="advert-sender">There are no advertisements yet!</span></div>';
+        var element = '<div class="advert"><span class="advert-sender">¡No hay anuncios!</span></div>';
         $(".advert-list").append(element);
     }
 }
@@ -219,7 +219,7 @@ $(document).on('click','#adv-delete',function(e){
     e.preventDefault();
     $.post('https://qb-phone/DeleteAdvert', function(){
         setTimeout(function(){
-            QB.Phone.Notifications.Add("fas fa-ad", "Advertisement", "The ad was deleted", "#ff8f1a", 2000);
+            QB.Phone.Notifications.Add("fas fa-ad", "Anuncios", "El anuncio ha sido eliminado", "#ff8f1a", 2000);
         },400)
     });
 })
